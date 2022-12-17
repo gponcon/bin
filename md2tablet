@@ -27,12 +27,3 @@ rm $OUTFILE'_original'
 
 # --wrap=preserve : supprime les défauts de retour à la ligne
 #    -V mainfont:"Lato Light" \
-
-# \setuplayout[header=10mm]
-# \setupheader[text][after=\vskip 2pt \hrule]
-# \setupheadertexts[\setups{text}]
-# \startsetups[text]
-#   \rlap{ARTHUR EXPEDITIONS}
-#   \hfill
-#   \llap{V3.2 - 08/11/2022}
-# \stopsetups

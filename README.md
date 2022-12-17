@@ -7,3 +7,7 @@ Made by Guillaume Ponçon
 - `md2tablet` : build markdown to pdf A6 (tablet) with pandoc
 - `rename-simple` : "Guillaume   Ponçon.pdf" -> guillaume-poncon.pdf
 - `start-vnc` : start X11VNC server (infinite loop)
+
+## Installation
+
+Clone this repository and add the root directory to `$PATH` in your `.bashrc` or equivalent.

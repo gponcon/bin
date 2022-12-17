@@ -2,5 +2,6 @@
 
 while [ 1 ]
 do 
-	ping -c 1 google.com && mplayer /home/guillaume/Téléchargements/qtVlm/img/bell2.mp3
+	ping -c 1 google.com && mplayer /usr/share/sounds/gnome/default/alerts/drip.ogg
+	sleep 1
 done
