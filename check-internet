@@ -1,0 +1,6 @@
+#!/bin/sh
+
+while [ 1 ]
+do 
+	ping -c 1 google.com && mplayer /home/guillaume/Téléchargements/qtVlm/img/bell2.mp3
+done

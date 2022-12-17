@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# By Guillaume Ponçon
+# TODO: author auto detection
+
+INFILE=$1
+OUTFILE=$1'.tablet.pdf'
+AUTHOR="Guillaume Ponçon"
+
+pandoc --pdf-engine=context --from=markdown --wrap=preserve \
+    -V lang=fr-FR \
+    -V layout:backspace=10mm,width=85mm,topspace=10mm,header=0mm,footer=8mm,height=130mm \
+    -V papersize:a6 \
+    -V fontsize:9pt \
+    -V pagenumbering:"location={footer,middle},left=- ,right= -" \
+    -V colorlinks=true \
+    -V linkcolor=blue \
+    -V urlcolor=red \
+    -V toccolor=gray \
+    -V interlinespace=3ex \
+    -V mainfont:"Gentium Basic" \
+    -o $OUTFILE $INFILE
+exiftool \
+    -Creator="$AUTHOR" \
+    $OUTFILE
+rm $OUTFILE'_original'
+
+# --wrap=preserve : supprime les défauts de retour à la ligne
+#    -V mainfont:"Lato Light" \
+
+# \setuplayout[header=10mm]
+# \setupheader[text][after=\vskip 2pt \hrule]
+# \setupheadertexts[\setups{text}]
+# \startsetups[text]
+#   \rlap{ARTHUR EXPEDITIONS}
+#   \hfill
+#   \llap{V3.2 - 08/11/2022}
+# \stopsetups

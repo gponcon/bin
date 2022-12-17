@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# By Guillaume Ponçon
+# TODO: author auto detection
+
+INFILE=$1
+OUTFILE=$1'.pdf'
+AUTHOR="Guillaume Ponçon"
+
+pandoc --pdf-engine=context \
+    -V lang=fr-FR \
+    -V layout:backspace=20mm,width=170mm,topspace=20mm,header=0mm,footer=10mm,height=260mm \
+    -V papersize:a4 \
+    -V fontsize:10pt \
+    -V pagenumbering:"location={footer,middle},left=- ,right= -" \
+    -V colorlinks=true \
+    -V linkcolor=blue \
+    -V urlcolor=red \
+    -V toccolor=gray \
+    -V interlinespace=3ex \
+    -V mainfont:"Gentium Basic" \
+    -o $OUTFILE $INFILE
+exiftool \
+    -Creator="$AUTHOR" \
+    $OUTFILE
+rm $OUTFILE'_original'
