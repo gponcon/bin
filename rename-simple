@@ -2,20 +2,20 @@
 
 # By Guillaume Ponçon
 
-rename 's/ç/c/gi' *
-rename 's/é/e/gi' *
-rename 's/è/e/gi' *
-rename 's/ê/e/gi' *
-rename 's/à/a/gi' *
-rename 's/@/a/gi' *
-rename 's/ù/u/gi' *
-rename 's/î/i/gi' *
-rename 's/€/e/gi' *
-rename 's/^[^0-9a-zA-Z_.]+//' *
-rename 's/[^0-9a-zA-Z_.]/-/g' *
-rename 's/-+/-/g' *
-rename 's/_+/_/g' *
-rename 's/[_-][_-]+/-/g' *
-rename 's/[\.-][\.-]+/./g' *
-rename 'y/A-Z/a-z/' *
-rename 's/[\._-]+$//' *
+perl-rename 's/ç/c/gi' *
+perl-rename 's/é/e/gi' *
+perl-rename 's/è/e/gi' *
+perl-rename 's/ê/e/gi' *
+perl-rename 's/à/a/gi' *
+perl-rename 's/@/a/gi' *
+perl-rename 's/ù/u/gi' *
+perl-rename 's/î/i/gi' *
+perl-rename 's/€/e/gi' *
+perl-rename 's/^[^0-9a-zA-Z_.]+//' *
+perl-rename 's/[^0-9a-zA-Z_.]/-/g' *
+perl-rename 's/-+/-/g' *
+perl-rename 's/_+/_/g' *
+perl-rename 's/[_-][_-]+/-/g' *
+perl-rename 's/[\.-][\.-]+/./g' *
+perl-rename 'y/A-Z/a-z/' *
+perl-rename 's/[\._-]+$//' *

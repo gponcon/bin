@@ -19,8 +19,8 @@ pandoc --pdf-engine=context \
     -V toccolor=gray \
     -V interlinespace=3ex \
     -V mainfont:"Gentium Basic" \
-    -o $OUTFILE $INFILE
-exiftool \
-    -Creator="$AUTHOR" \
-    $OUTFILE
-rm $OUTFILE'_original'
+    -s -o $OUTFILE $INFILE
+# exiftool \
+#     -Creator="$AUTHOR" \
+#     $OUTFILE
+# rm $OUTFILE'_original'
