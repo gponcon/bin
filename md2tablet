@@ -7,7 +7,7 @@ INFILE=$1
 OUTFILE=$1'.tablet.pdf'
 AUTHOR="Guillaume Ponçon"
 
-pandoc --pdf-engine=context --from=markdown --wrap=preserve \
+pandoc --pdf-engine=context --from=markdown --wrap=preserve -f markdown-implicit_figures \
     -V lang=fr-FR \
     -V layout:backspace=10mm,width=85mm,topspace=10mm,header=0mm,footer=8mm,height=130mm \
     -V papersize:a6 \
@@ -18,8 +18,8 @@ pandoc --pdf-engine=context --from=markdown --wrap=preserve \
     -V urlcolor=red \
     -V toccolor=gray \
     -V interlinespace=3ex \
-    -V mainfont:"Gentium Basic" \
-    -o $OUTFILE $INFILE
+    -V mainfont:"gentiumplus" \
+    -s -o $OUTFILE $INFILE
 exiftool \
     -Creator="$AUTHOR" \
     $OUTFILE

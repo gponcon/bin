@@ -11,7 +11,7 @@ pandoc --pdf-engine=context --from=markdown --wrap=preserve -f markdown-implicit
     -V lang=fr-FR \
     -V layout:backspace=20mm,width=170mm,topspace=20mm,header=0mm,footer=10mm,height=260mm \
     -V papersize:a4 \
-    -V fontsize:10pt \
+    -V fontsize:13pt \
     -V pagenumbering:"location={footer,middle},left=- ,right= -" \
     -V colorlinks=true \
     -V linkcolor=blue \
